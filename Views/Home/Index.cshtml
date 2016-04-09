@@ -7,15 +7,15 @@
     <h1>{{models.helloAngular}}</h1>
 
     <ul>
-        <li><a href="/routeOne">Route One</a></li>
-        <li><a href="/routeTwo/6">Route Two</a></li>
-        <li><a href="/routeThree">Route Three</a></li>
+        <li><a href="/users">Users</a></li>
+        <li><a href="/pages">Pages</a></li>
+        <li><a href="/invoice">Invoice</a></li>
     </ul>
 
     <div ng-view></div>
 
-    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular-route.min.js"></script>
+    <script src="~/Scripts/angular.min.js"></script>
+    <script src="~/Scripts/angular-route.min.js"></script>
     @Scripts.Render("~/bundles/InvoiceApplication")
 </body>
 </html>

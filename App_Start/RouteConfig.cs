@@ -14,19 +14,19 @@ namespace InvoiceApplication
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
-                name: "routeOne",
-                url: "routesDemo/One",
-                defaults: new { controller = "RoutesDemo", action = "One" });
+                name: "Users",
+                url: "routes/AddForm",
+                defaults: new { controller = "Routes", action = "AddForm" });
 
             routes.MapRoute(
-                name: "routeTwo",
-                url: "routesDemo/Two/{donuts}",
-                defaults: new { controller = "RoutesDemo", action = "Two", donuts = UrlParameter.Optional });
+                name: "Pages",
+                url: "routes/PageList",
+                defaults: new { controller = "Routes", action = "PageList"});
 
             routes.MapRoute(
-                name: "routeThree",
-                url: "routesDemo/Three",
-                defaults: new { controller = "RoutesDemo", action = "Three" });
+                name: "Invoice",
+                url: "routes/InvoiceList",
+                defaults: new { controller = "Routes", action = "InvoiceList" });
 
             routes.MapRoute(
                 name: "Default",

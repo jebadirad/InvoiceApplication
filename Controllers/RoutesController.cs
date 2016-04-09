@@ -6,20 +6,19 @@ using System.Web.Mvc;
 
 namespace InvoiceApplication.Controllers
 {
-    public class RoutesDemoController : Controller
+    public class RoutesController : Controller
     {
         // GET: RoutesDemo
-        public ActionResult One()
+        public ActionResult AddForm()
         {
             return View();
         }
 
-        public ActionResult Two(int donuts = 1)
+        public ActionResult PageList()
         {
-            ViewBag.Donuts = donuts;
             return View();
         }
-        public ActionResult Three()
+        public ActionResult InvoiceList()
         {
             return View();
         }

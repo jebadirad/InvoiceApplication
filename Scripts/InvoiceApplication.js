@@ -6,14 +6,14 @@ var configFunction = function ($routeProvider, $httpProvider, $locationProvider)
     $locationProvider.hashPrefix('!').html5Mode({enabled: true, requireBase: false});
 
     $routeProvider
-        .when("/routeOne", {
-            templateUrl: 'routesDemo/one'
+        .when("/users", {
+            templateUrl: 'routes/AddForm'
         })
-        .when("/routeTwo/:donuts", {
-            templateUrl: function (params) { return '/routesDemo/two?donuts=' + params.donuts;}
+        .when("/pages", {
+            templateUrl: "routes/PageList"
         })
-        .when("/routeThree", {
-            templateUrl: 'routesDemo/three'
+        .when("/invoice", {
+            templateUrl: 'routes/InvoiceList'
         });
 
 }
