@@ -3,7 +3,7 @@
 InvoiceApplication.controller('LandingPageController', LandingPageController);
 
 var configFunction = function ($routeProvider, $httpProvider, $locationProvider) {
-    $locationProvider.hashPrefix('!').html5Mode(true);
+    $locationProvider.hashPrefix('!').html5Mode({enabled: true, requireBase: false});
 
     $routeProvider
         .when("/routeOne", {
