@@ -14,10 +14,7 @@ namespace InvoiceApplication.Controllers
             return View();
         }
 
-        public ActionResult PageList()
-        {
-            return View();
-        }
+        
         public ActionResult InvoiceList()
         {
             return View();

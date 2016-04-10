@@ -9,9 +9,6 @@ var configFunction = function ($routeProvider, $httpProvider, $locationProvider)
         .when("/user", {
             templateUrl: 'routes/User'
         })
-        .when("/pages", {
-            templateUrl: "routes/PageList"
-        })
         .when("/invoice", {
             templateUrl: 'routes/InvoiceList'
         })

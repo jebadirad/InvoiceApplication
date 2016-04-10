@@ -22,11 +22,7 @@ namespace InvoiceApplication
                 url: "User/GetUserList",
                 defaults: new { controller = "User", action = "GetUserList" }
                 );
-            routes.MapRoute(
-                name: "Pages",
-                url: "routes/PageList",
-                defaults: new { controller = "Routes", action = "PageList"});
-
+            
             routes.MapRoute(
                 name: "Invoice",
                 url: "routes/InvoiceList",
