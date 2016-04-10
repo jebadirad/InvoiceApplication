@@ -18,11 +18,6 @@ namespace InvoiceApplication.Controllers
             JsonResult jsonresult;
             if (!string.IsNullOrEmpty(param.Name) && !string.IsNullOrEmpty(param.Type))
             {
-                User user = new User
-                {
-                    Name = param.Name,
-                    Type = param.Type
-                };
                 IList<User> users = new List<User>();
 
                 using (StreamReader sr = new StreamReader(HttpRuntime.AppDomainAppPath + "/Models/userdatabase.json"))
@@ -31,14 +26,15 @@ namespace InvoiceApplication.Controllers
 
                     users = JsonConvert.DeserializeObject<List<User>>(sr.ReadToEnd());
                 }
-                users.Add(user);
+                param.ID = (users.Count() + 1).ToString();
+                users.Add(param);
                 string json = JsonConvert.SerializeObject(users.ToArray());
                 using (StreamWriter sw = new StreamWriter(HttpRuntime.AppDomainAppPath + "/Models/userdatabase.json"))
                 {
                     sw.WriteLine(json);
                 }
                 //push to json file
-                jsonresult = Json(user, JsonRequestBehavior.AllowGet);
+                jsonresult = Json(param, JsonRequestBehavior.AllowGet);
             }
             else
             {

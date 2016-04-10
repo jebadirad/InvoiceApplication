@@ -23,5 +23,10 @@ namespace InvoiceApplication.Controllers
         {
             return View();
         }
+
+        public ActionResult AddInvoiceForm()
+        {
+            return View();
+        }
     }
 }

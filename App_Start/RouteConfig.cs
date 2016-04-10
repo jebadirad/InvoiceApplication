@@ -22,11 +22,25 @@ namespace InvoiceApplication
                 url: "User/GetUserList",
                 defaults: new { controller = "User", action = "GetUserList" }
                 );
-            
+            //invoice view
             routes.MapRoute(
                 name: "Invoice",
                 url: "routes/InvoiceList",
                 defaults: new { controller = "Routes", action = "InvoiceList" });
+            routes.MapRoute(
+               name: "InvoiceAddForm",
+               url: "routes/Invoice/Add",
+               defaults: new { controller = "Routes", action = "AddInvoiceForm" });
+            //invoice api end point 
+            routes.MapRoute(
+                name: "InvoiceList",
+                url: "Invoice/Get/{ID}",
+                defaults: new { controller = "Invoice", action = "GetAll", ID = UrlParameter.Optional }
+                );
+            routes.MapRoute(
+              name: "InvoiceAdd",
+              url: "Invoice/Add",
+              defaults: new { controller = "Invoice", action = "Add" });
             //api end point
             routes.MapRoute(
                 name: "AddUser",

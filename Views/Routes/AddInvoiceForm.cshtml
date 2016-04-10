@@ -1,0 +1,9 @@
+﻿<div ng-controller="InvoiceController">
+    Charge To: <select name="users" 
+                       ng-model="chargeTo.charge">
+                    <option ng-repeat="user in chargeTo.users" value={{user.ID}}>{{user.Name}}</option>
+                </select><br />
+    Bill Amount: $<input type="text" ng-model="charges.bill"/><br />
+    Description: <input type="text" ng-model="charges.description"/>
+    <button id="SubmitInvoice" ng-click="submitInvoice()">Submit</button>
+</div>

@@ -1,0 +1,62 @@
+[
+  {
+    "ID": "1",
+    "User": {
+      "ID": "1",
+      "Name": "Me",
+      "Type": "user"
+    },
+    "Charges": "1234",
+    "ChargeDesc": "fdsfa",
+    "ChargeTo": {
+      "ID": "1",
+      "Name": "Me",
+      "Type": "user"
+    }
+  },
+  {
+    "ID": "2",
+    "User": {
+      "ID": "1",
+      "Name": "Me",
+      "Type": "user"
+    },
+    "Charges": "1234222",
+    "ChargeDesc": "fdsfa",
+    "ChargeTo": {
+      "ID": "3",
+      "Name": "blahblah2222",
+      "Type": "user"
+    }
+  },
+  {
+    "ID": "3",
+    "User": {
+      "ID": "1",
+      "Name": "Me",
+      "Type": "user"
+    },
+    "Charges": "1234222",
+    "ChargeDesc": "fdsafasx",
+    "ChargeTo": {
+      "ID": "955",
+      "Name": "Im a new user",
+      "Type": "user"
+    }
+  },
+  {
+    "ID": "4",
+    "User": {
+      "ID": "1",
+      "Name": "Me",
+      "Type": "user"
+    },
+    "Charges": "12223423333",
+    "ChargeDesc": "333",
+    "ChargeTo": {
+      "ID": "955",
+      "Name": "Im a new user",
+      "Type": "user"
+    }
+  }
+]

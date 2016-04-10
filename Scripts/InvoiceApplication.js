@@ -2,6 +2,7 @@
 
 InvoiceApplication.controller('HomeController', HomeController);
 InvoiceApplication.controller('UserController', ["$scope", "$http", UserController]);
+InvoiceApplication.controller('InvoiceController', ["$scope", "$http", InvoiceController]);
 var configFunction = function ($routeProvider, $httpProvider, $locationProvider) {
     $locationProvider.hashPrefix('!').html5Mode({ enabled: true, requireBase: false });
 
@@ -11,6 +12,9 @@ var configFunction = function ($routeProvider, $httpProvider, $locationProvider)
         })
         .when("/invoice", {
             templateUrl: 'routes/InvoiceList'
+        })
+        .when("/invoice/add", {
+            templateUrl: '/routes/Invoice/Add'
         })
         .when("/user/add", {
             templateUrl: '/routes/User/Add'
