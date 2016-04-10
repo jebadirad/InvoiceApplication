@@ -1,6 +1,6 @@
 ﻿var UserController = function ($scope, $http) {
     $scope.user = {
-        name: 'blahblah',
+        name: '',
         type: 'user',
     };
     $scope.error = 0;

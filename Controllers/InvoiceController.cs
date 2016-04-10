@@ -11,11 +11,7 @@ namespace InvoiceApplication.Controllers
 {
     public class InvoiceController : Controller
     {
-        // GET: Invoice
-        public JsonResult GetAll()
-        {
-            return Json("", JsonRequestBehavior.AllowGet);
-        }
+       
 
         public JsonResult Get(string ID)
         {

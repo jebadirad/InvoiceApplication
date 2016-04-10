@@ -5,17 +5,20 @@
         users : [],
         charge : ""
     };
+    $scope.complete = false;
     $scope.charges = {
         bill: 0.0,
         description : ""
     };
     var PopulateUsers = function (response) {
-        console.log("hello");
         
         $scope.chargeTo.users = response.data;
-        console.log($scope.chargeTo);
-        console.log($scope.chargeTo.users);
     };
+    var PopulateInvoices = function (response) {
+
+        $scope.invoices = response.data;
+    };
+    $http.get('/Invoice/Get/All').then(PopulateInvoices, errorCallback);
     $http.get('/User/GetUserList').then(PopulateUsers, errorCallback);
     var SuccessGetCallback = function (response) {
         console.log(response);
@@ -23,7 +26,11 @@
         console.log($scope.users);
     };
     var successCallback = function (response) {
+        $scope.chargeTo.charge = "";
+        $scope.charges.bill = 0.0;
+        $scope.charges.description = "";
         $scope.complete = true;
+
     };
     var errorCallback = function (response) {
         $scope.error = 1;
@@ -46,9 +53,6 @@
      
     }
 }
-
-
-
 
 // The $inject property of every controller (and pretty much every other type of object in Angular) needs to be a string array equal to the controllers arguments, only as strings
 InvoiceController.$inject = ['$scope'];

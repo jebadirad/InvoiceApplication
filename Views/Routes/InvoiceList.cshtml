@@ -1,6 +1,8 @@
 ﻿<div ng-controller="InvoiceController">
     <p><a href="/invoice/add">Create New Invoice</a></p>
-    <ul ng-repeat="invoice in invoices">
-        hi
+    <p>Click an invoice below to view printable version</p>
+    <ul>
+        <li ng-repeat="invoice in invoices"><a href="/invoice/view/{{invoice.ID}}"> 
+        From {{invoice.User.Name}} : ${{invoice.Charges}} : {{invoice.ChargeDesc}} : To {{invoice.ChargeTo.Name}}</a></li>
     </ul>
 </div>

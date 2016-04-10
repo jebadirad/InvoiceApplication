@@ -1,4 +1,5 @@
-﻿using System;
+﻿using InvoiceApplication.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -26,6 +27,19 @@ namespace InvoiceApplication.Controllers
 
         public ActionResult AddInvoiceForm()
         {
+            return View();
+        }
+        public ActionResult InvoiceForm(string id)
+        {
+            Invoice invoice = new Invoice();
+            invoice = invoice.Get(id);
+            if(invoice != null)
+            {
+                ViewBag.Invoice = invoice;
+
+            }
+
+
             return View();
         }
     }

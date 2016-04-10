@@ -1,4 +1,8 @@
 ﻿<div ng-controller="InvoiceController">
+    <div class="SuccessMessage">
+        <span ng-show="complete">Success!</span>
+    </div>
+    
     Charge To: <select name="users" 
                        ng-model="chargeTo.charge">
                     <option ng-repeat="user in chargeTo.users" value={{user.ID}}>{{user.Name}}</option>

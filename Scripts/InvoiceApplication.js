@@ -16,6 +16,11 @@ var configFunction = function ($routeProvider, $httpProvider, $locationProvider)
         .when("/invoice/add", {
             templateUrl: '/routes/Invoice/Add'
         })
+        .when("/invoice/view/:id", {
+            templateUrl: function (params) {
+                return '/routes/Invoice/view?id=' + params.id;
+            }
+        })
         .when("/user/add", {
             templateUrl: '/routes/User/Add'
         });

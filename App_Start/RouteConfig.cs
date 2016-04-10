@@ -31,11 +31,16 @@ namespace InvoiceApplication
                name: "InvoiceAddForm",
                url: "routes/Invoice/Add",
                defaults: new { controller = "Routes", action = "AddInvoiceForm" });
+            routes.MapRoute(
+                name: "InvoiceGenerator",
+                url: "routes/Invoice/view/{id}",
+                defaults: new {controller = "Routes", action = "InvoiceForm", id = UrlParameter.Optional}
+                );
             //invoice api end point 
             routes.MapRoute(
                 name: "InvoiceList",
                 url: "Invoice/Get/{ID}",
-                defaults: new { controller = "Invoice", action = "GetAll", ID = UrlParameter.Optional }
+                defaults: new { controller = "Invoice", action = "Get", ID = UrlParameter.Optional }
                 );
             routes.MapRoute(
               name: "InvoiceAdd",

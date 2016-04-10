@@ -1,0 +1,17 @@
+﻿
+<table>
+    <tr>
+        <th>ID</th>
+        <th>From</th>
+        <th>Charge</th>
+        <th>Description</th>
+        <th>Billed To</th>
+    </tr>
+    <tr>
+        <td>@ViewBag.Invoice.ID</td>
+        <td>@ViewBag.Invoice.User.Name</td>
+        <td>$ @ViewBag.Invoice.Charges</td>
+        <td>@ViewBag.Invoice.ChargeDesc</td>
+        <td>@ViewBag.Invoice.ChargeTo.Name</td>
+    </tr>
+</table>

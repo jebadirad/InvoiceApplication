@@ -266,6 +266,7 @@
     <Content Include="Scripts\angular-animate.min.js.map" />
     <Content Include="Views\Routes\UserList.cshtml" />
     <Content Include="Views\Routes\AddInvoiceForm.cshtml" />
+    <Content Include="Views\Routes\InvoiceForm.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
