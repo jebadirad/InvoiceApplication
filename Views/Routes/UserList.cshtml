@@ -1,0 +1,6 @@
+﻿<div ng-controller="UserController">
+    <p><a href="/user/add">Add New User</a></p>
+    <ul ng-repeat="user in users">
+        <li>{{user.ID}} : {{user.Name}}: {{user.Type}}</li>
+    </ul>
+</div>

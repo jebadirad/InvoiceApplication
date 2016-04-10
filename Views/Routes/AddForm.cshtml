@@ -1,2 +1,16 @@
-﻿
-<p>Route One</p>
+﻿<div ng-controller="UserController">
+    <div class="SuccessMessage">
+        <span ng-show="complete">Success!</span>
+    </div>
+    <div class="ErrorMessage">
+        <span ng-show="error > 0">Error!</span>
+    </div>
+    <div class="container">
+    Name: <input type="text" ng-model="user.name" />
+    Type: <select name="type" ng-model="user.type">
+        <option value="user">User</option>
+        <option value="business">Business</option>
+    </select>
+    <button id="addUserSubmit" ng-click="submitUser()">Submit</button>
+    </div>
+</div>

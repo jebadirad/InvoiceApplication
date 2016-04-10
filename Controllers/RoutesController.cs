@@ -22,5 +22,9 @@ namespace InvoiceApplication.Controllers
         {
             return View();
         }
+        public ActionResult UserList()
+        {
+            return View();
+        }
     }
 }
