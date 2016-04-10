@@ -1,8 +1,9 @@
-﻿var HomeController = function ($scope) {
+﻿//simple landing page controller.  
+var HomeController = function ($scope) {
     $scope.models = {
         helloAngular: 'Angular MVC Demo'
     };
 }
 
-// The $inject property of every controller (and pretty much every other type of object in Angular) needs to be a string array equal to the controllers arguments, only as strings
+//inject our dependencies.
 HomeController.$inject = ['$scope'];

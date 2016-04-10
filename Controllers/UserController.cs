@@ -11,7 +11,14 @@ namespace InvoiceApplication.Controllers
 {
     public class UserController : Controller
     {
-        // add user
+        /// <summary>
+        /// Api endpoint to add a new user
+        /// </summary>
+        /// <param name="param">a user object with id, name, and type filled out
+        /// Generates ID on server side but should have an id when coming in from client side for 
+        /// client side tracking. Similar to reactjs thinking of auto populating the user 
+        /// as it gets created for use until the server catches up.</param>
+        /// <returns></returns>
         [HttpPost]
         public JsonResult Add(User param)
         {
@@ -19,7 +26,7 @@ namespace InvoiceApplication.Controllers
             if (!string.IsNullOrEmpty(param.Name) && !string.IsNullOrEmpty(param.Type))
             {
                 IList<User> users = new List<User>();
-
+                //needs some try catch or a way to handle exceptions and backout.
                 using (StreamReader sr = new StreamReader(HttpRuntime.AppDomainAppPath + "/Models/userdatabase.json"))
                 {
 
@@ -44,7 +51,11 @@ namespace InvoiceApplication.Controllers
             return jsonresult;
         }
 
-        //get single
+        /// <summary>
+        /// API endpoint to get a single user back.
+        /// </summary>
+        /// <param name="ID">The id of the user</param>
+        /// <returns>a user object or deny the request</returns>
         [HttpGet]
         public JsonResult Get(string ID)
         {
@@ -69,12 +80,16 @@ namespace InvoiceApplication.Controllers
             return jsonresult;
         }
        
+        /// <summary>
+        /// API endpoint that gets all users 
+        /// </summary>
+        /// <returns>a list of all users.</returns>
         [HttpGet]
         public JsonResult GetUserList()
         {
             JsonResult jsonresult;
             IList<User> users = new List<User>();
-
+            //needs some handling here.
             using (StreamReader sr = new StreamReader(HttpRuntime.AppDomainAppPath + "/Models/userdatabase.json"))
             {
                 users = JsonConvert.DeserializeObject<List<User>>(sr.ReadToEnd());

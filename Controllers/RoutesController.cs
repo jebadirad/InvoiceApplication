@@ -1,12 +1,11 @@
 ﻿using InvoiceApplication.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace InvoiceApplication.Controllers
 {
+    /// <summary>
+    /// Routes all page views. 
+    /// </summary>
     public class RoutesController : Controller
     {
         // GET: RoutesDemo
@@ -29,6 +28,11 @@ namespace InvoiceApplication.Controllers
         {
             return View();
         }
+        /// <summary>
+        /// sends the invoice form back to the ui.
+        /// </summary>
+        /// <param name="id">the id of the invoice in question for generation</param>
+        /// <returns>the invoice form with the invoice. otherwise an empty form.</returns>
         public ActionResult InvoiceForm(string id)
         {
             Invoice invoice = new Invoice();
